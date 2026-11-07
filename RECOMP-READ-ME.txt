@@ -1,0 +1,34 @@
+Experimental MHGURecomp overlay for Windows
+
+Start MHGURecomp, then run MHGU-MHXX-HP-Overlay.exe in this folder.
+Close other copies of the overlay. Keep this entire folder together.
+Enter a hunt; the first scan may take several seconds.
+Look for [Recomp] Scanned ... monster candidate(s) in the console.
+The patch reads game memory; it does not modify the game or its files.
+
+Changes:
+- Detect mhgurecomp.exe and anchor to the SDL window's client area.
+- Use the documented guest address base 0x10000000000.
+- Scan committed readable guest heap pages, skipping reserved and guarded gaps.
+- Cache monster pattern addresses; refresh on loaded-slot / quest changes and
+  periodically. Handles are closed after each poll.
+- Keep the original monster signature, HP fields, names, size and status offsets.
+- Show statuses for all large monsters; native target-selection detection is not
+  implemented. The separate config has always_show_abnormal_status=true.
+
+This is a separate build. The saved Yuzu overlay was not modified.
+Prepared against MHGURecomp source commit 34e753a2d37ed3d10969471a004e2355021a620b.
+The runtime memory layout and game signature still need a live hunt test.
+The original overlay's display limit for HP remains in place.
+Do not call this release confirmed compatible until HP is checked in game,
+including combat, changing zones, changing quests and restarting the game.
+
+Patch source: recomp_memory.py and recomp_window.py.
+Original overlay GPL-3.0 license: LICENSE; original project and source:
+https://github.com/Alexander-Lancellott/MHGU-MHXX-HP-Overlay-For-Switch-Emulator
+Runtime source reference: https://github.com/morerokk/MHGURecomp
+
+Visual / hotkey update:
+- Monsters are drawn as cards (name, size/crown badge, colour-changing HP bar, status bars).
+- Ctrl+Alt+O shows or hides the overlay without closing it (config: toggle_hotkey).
+- recomp_memory.py and recomp_window.py now live in modules/ and are built into the exe.
