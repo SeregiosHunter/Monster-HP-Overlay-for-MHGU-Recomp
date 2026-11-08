@@ -1,7 +1,7 @@
 # Monster HP Overlay for MHGU Recomp
 
 > [!IMPORTANT]
-> **I recommend that you back up your save before testing any mods.**
+> **I recommend you to back up your save file every time you test any mods.**
 
 An on-screen monster HP overlay for **Monster Hunter Generations Ultimate running on [MHGURecomp](https://github.com/morerokk/MHGURecomp)** (Windows).
 
