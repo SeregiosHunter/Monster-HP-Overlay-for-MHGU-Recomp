@@ -62,8 +62,8 @@ class MonsterCard(QWidget):
         self.name_font = make_font(fs * 0.85, QFont.Weight.DemiBold)
         self.small_name_font = make_font(fs * 0.7, QFont.Weight.DemiBold)
         self.pct_font = make_font(fs * 0.7, QFont.Weight.Medium)
-        self.bar_font = make_font(fs * 0.62, QFont.Weight.DemiBold)
-        self.small_bar_font = make_font(fs * 0.5, QFont.Weight.DemiBold)
+        self.bar_font = make_font(fs * 0.9, QFont.Weight.Bold)
+        self.small_bar_font = make_font(fs * 0.68, QFont.Weight.Bold)
         self.status_font = make_font(fs * 0.62, QFont.Weight.Medium)
 
     # ---- QLabel-like API -------------------------------------------------------------------------------------------
@@ -100,7 +100,7 @@ class MonsterCard(QWidget):
         fs = self.fs
         pad_x = round(fs * (0.5 if small else 0.65))
         pad_y = round(fs * (0.3 if small else 0.5))
-        bar_h = round(fs * (0.62 if small else 0.95))
+        bar_h = round(fs * (0.85 if small else 1.25))
         gap = round(fs * (0.2 if small else 0.3))
         name_fm = QFontMetrics(self.small_name_font if small else self.name_font)
         status_fm = QFontMetrics(self.status_font)
