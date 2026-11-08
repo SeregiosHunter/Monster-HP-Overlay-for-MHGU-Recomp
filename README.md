@@ -22,7 +22,7 @@ It shows each monster as a small card: name, size and crown, a colour-changing H
 
 - Windows.
 - [MHGURecomp](https://github.com/morerokk/MHGURecomp) running Monster Hunter Generations Ultimate.
-- Tested with MHGURecomp 0.15.1. A different Recomp version may move the data this overlay reads (see [Known limitations](#known-limitations)).
+- Tested with MHGURecomp 0.15.2, and older versions. A newer Recomp version may move the data this overlay reads (see [Known limitations](#known-limitations)).
 
 ## How to use
 
