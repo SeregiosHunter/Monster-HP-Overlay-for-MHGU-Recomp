@@ -18,6 +18,8 @@ It shows each monster as a small card: name, size and crown, a colour-changing H
 - **Ctrl + Alt + O** shows or hides the overlay without closing it. It keeps reading the game while hidden.
 - Reads game memory only. It does not modify the game or any of its files.
 
+<img src="overlay.png" alt="Overlay in game" width="480">
+
 ## Requirements
 
 - Windows.
