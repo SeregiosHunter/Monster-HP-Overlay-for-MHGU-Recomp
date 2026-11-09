@@ -1,7 +1,5 @@
 # Monster HP Overlay for MHGU Recomp
 
-> [!IMPORTANT]
-> **I recommend you to back up your save file every time you test any mods.**
 
 An on-screen monster HP overlay for **Monster Hunter Generations Ultimate running on [MHGURecomp](https://github.com/morerokk/MHGURecomp)** (Windows).
 
@@ -33,6 +31,11 @@ It shows each monster as a small card: name, size and crown, a colour-changing H
 3. Run `MHGU-MHXX-HP-Overlay.exe` from the extracted folder. Close any other copy of the overlay first.
 4. The first scan can take a few seconds. The console shows `[Recomp] Scanned ... monster candidate(s)` when it finds monsters.
 5. Press **Ctrl + Alt + O** any time to hide or show the cards.
+
+
+> [!IMPORTANT]
+> **I recommend you to back up your save file every time you test any mods.**
+
 
 ## Configuration
 
