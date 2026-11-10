@@ -215,6 +215,11 @@ class ConfigOverlay:
             "The symbols *, ~, $ and UP are not allowed."
         )
         print_error("toggle_hotkey", error)
+    hidden_status = {
+        name.strip().lower()
+        for name in set_option("hidden_status", Config.Overlay, "get", "").split(",")
+        if name.strip()
+    }
     debugger = set_option("debugger", Config.Overlay, "getboolean", "false")
     font_size = set_option("font_size", Config.Overlay, "getint", "18")
     font_size = font_size if font_size >= 1 else 1

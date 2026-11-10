@@ -326,6 +326,8 @@ class Overlay(QWidget):
                             self.always_show_abnormal_status or monster_number == monster_selected
                         ):
                             for key, value in monster[4].items():
+                                if key.lower() in ConfigOverlay.hidden_status:
+                                    continue
                                 if key == "Rage":
                                     statuses.append((key, key, "rage", value, None))
                                 else:
